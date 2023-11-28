@@ -25,7 +25,12 @@ export const Form: FunctionComponent<FormProps> = (props) => {
 
       <div>
         <label htmlFor="my-checkbox">Please check this checkbox</label>
-        <input type="checkbox" name="my-checkbox" id="my-checkbox" />
+        <input
+          type="checkbox"
+          name="my-checkbox"
+          aria-label="my-checkbox"
+          id="ok"
+        />
       </div>
 
       <button type="submit">Submit</button>
