@@ -1,0 +1,27 @@
+{
+  "name": "react-testing-library-demo",
+  "version": "1.0.0",
+  "description": "An example of how to use the react-testing-library in codesandbox",
+  "keywords": [],
+  "homepage": "https://codesandbox.io/s/new",
+  "main": "src/index.js",
+  "dependencies": {
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-scripts": "latest",
+    "@testing-library/dom": "https://pkg.csb.dev/testing-library/dom-testing-library/commit/37f1c76d/@testing-library/dom",
+    "@types/jest": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@testing-library/user-event": "latest"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
