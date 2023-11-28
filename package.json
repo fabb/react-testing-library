@@ -6,18 +6,24 @@
   "homepage": "https://codesandbox.io/s/new",
   "main": "src/index.js",
   "dependencies": {
+    "@testing-library/dom": "https://pkg.csb.dev/testing-library/dom-testing-library/commit/37f1c76d/@testing-library/dom",
     "@testing-library/jest-dom": "latest",
     "@testing-library/react": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "react-scripts": "latest",
-    "@testing-library/dom": "https://pkg.csb.dev/testing-library/dom-testing-library/commit/37f1c76d/@testing-library/dom",
+    "@testing-library/user-event": "latest",
     "@types/jest": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "@testing-library/user-event": "latest"
+    "react": "latest",
+    "react-dom": "latest",
+    "react-scripts": "latest"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "eslint": "^8.54.0",
+    "eslint-plugin-react": "^7.33.2"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
