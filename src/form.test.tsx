@@ -12,11 +12,12 @@ it("should fill out the form", async () => {
     screen.getByRole("textbox", { name: /favorite color:/i }),
     "cyanblue",
   );
-  await userEvent.selectOptions(
-    screen.getByRole("checkbox", { name: /mandatory-checkbox/i }),
-    "ok",
-  );
+  await userEvent.click(screen.getByRole("checkbox", { name: /my-checkbox/i }));
   await userEvent.click(screen.getByRole("button", { name: /submit/i }));
 
-  expect(mockOnSubmit).toMatchInlineSnapshot();
+  expect(mockOnSubmit).toHaveBeenCalledWith(expect.any(FormData));
+  const [formData] = mockOnSubmit.mock.calls[0];
+  expect(Object.fromEntries(formData)).toEqual({
+    "my-input": "cyanblue",
+  });
 });

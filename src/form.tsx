@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react";
 import "./form.css";
 
 interface FormProps {
-  onSubmit: (formData: FormData) => void;
+  onSubmit: () => void;
 }
 
 export const Form: FunctionComponent<FormProps> = (props) => {
