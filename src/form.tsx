@@ -24,7 +24,7 @@ export const Form: FunctionComponent<FormProps> = (props) => {
       </div>
 
       <div>
-        <label htmlFor="my-checkbox">Please check this checkbox</label>
+        <label htmlFor="ok">Please check this checkbox</label>
         <input
           type="checkbox"
           name="my-checkbox"

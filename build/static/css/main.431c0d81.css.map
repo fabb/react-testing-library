@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.431c0d81.css","mappings":"AAAA,KACE,eACF,CAEA,OACE,aAAc,CACd,iBACF,CCPA,EACE,sBACF","sources":["form.css","index.css"],"sourcesContent":["form {\n  margin-top: 32px;\n}\n\nform > * {\n  display: block;\n  margin-bottom: 8px;\n}\n","* {\n  font-family: sans-serif;\n}\n"],"names":[],"sourceRoot":""}
