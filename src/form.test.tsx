@@ -1,23 +1,19 @@
-import React from "react";
-import "jest";
-import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
-import { Form } from "./form";
+import 'jest'
+import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+import { Form } from './Form'
 
-it("should fill out the form", async () => {
-  const mockOnSubmit = jest.fn();
-  render(<Form onSubmit={mockOnSubmit} />);
+it('should fill out the form', async () => {
+    const mockOnSubmit = jest.fn()
+    render(<Form onSubmit={mockOnSubmit} />)
 
-  await userEvent.type(
-    screen.getByRole("textbox", { name: /favorite color:/i }),
-    "cyanblue",
-  );
-  await userEvent.click(screen.getByRole("checkbox", { name: /my-checkbox/i }));
-  await userEvent.click(screen.getByRole("button", { name: /submit/i }));
+    await userEvent.type(screen.getByRole('textbox', { name: /favorite color:/i }), 'cyanblue')
+    await userEvent.click(screen.getByRole('checkbox', { name: /my-checkbox/i }))
+    await userEvent.click(screen.getByRole('button', { name: /submit/i }))
 
-  expect(mockOnSubmit).toHaveBeenCalledWith(expect.any(FormData));
-  const [formData] = mockOnSubmit.mock.calls[0];
-  expect(Object.fromEntries(formData)).toEqual({
-    "my-input": "cyanblue",
-  });
-});
+    expect(mockOnSubmit).toHaveBeenCalledWith(expect.any(FormData))
+    const [formData] = mockOnSubmit.mock.calls[0]
+    expect(Object.fromEntries(formData)).toEqual({
+        'my-input': 'cyanblue',
+    })
+})
